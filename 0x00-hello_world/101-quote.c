@@ -1,8 +1,13 @@
-#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int main() {
-    const char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-    write(2, message, 59);  // 59 is the length of the message
-
-    return 1;
+/**
+ * main - Entry point
+ * Return: Always 1 (Success)
+ */
+int main(void)
+{
+	fwrite(STDOUT_FILENO, "and that piece of art is useful
+			\" - Dora Korpar, 2015-10-19\n", 59);
+	return (1);
 }
